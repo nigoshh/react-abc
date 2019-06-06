@@ -56,7 +56,7 @@ var Midi = function (_Component) {
 
 
       if (soundFontUrl) {
-        _abc_midi_controls2.default.midi.setSoundFont(soundFontUrl);
+        _abc_midi_controls2.default.setSoundFont(soundFontUrl);
       }
 
       (0, _abc_tunebook_midi2.default)(el || this.el, notation, parserParams, midiParams, renderParams);

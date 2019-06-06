@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import abcjs from 'abcjs/midi/abc_midi_controls'
+import midi from 'abcjs/midi/abc_midi_controls'
 import renderMidi from 'abcjs/src/api/abc_tunebook_midi';
 import { midiProps } from '../defaults/props';
 import './style.css';
@@ -18,7 +18,7 @@ class Midi extends Component {
     } = this.props;
 
     if (soundFontUrl) {
-      abcjs.midi.setSoundFont(soundFontUrl);
+      midi.setSoundFont(soundFontUrl);
     }
 
     renderMidi(
