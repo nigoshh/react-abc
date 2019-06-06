@@ -9,7 +9,6 @@ class Midi extends Component {
   componentDidMount() {
     const {
       el,
-      engraverParams,
       midiParams,
       notation,
       parserParams,
@@ -19,7 +18,6 @@ class Midi extends Component {
     renderMidi(
       el || this.el,
       notation,
-      engraverParams,
       parserParams,
       midiParams,
       renderParams,
@@ -37,7 +35,6 @@ class Midi extends Component {
 
 Midi.propTypes = {
   el: PropTypes.node,
-  engraverParams: PropTypes.object,
   midiParams: PropTypes.object,
   notation: PropTypes.string.isRequired,
   parserParams: PropTypes.object,

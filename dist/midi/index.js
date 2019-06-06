@@ -44,14 +44,13 @@ var Midi = function (_Component) {
     value: function componentDidMount() {
       var _props = this.props,
           el = _props.el,
-          engraverParams = _props.engraverParams,
           midiParams = _props.midiParams,
           notation = _props.notation,
           parserParams = _props.parserParams,
           renderParams = _props.renderParams;
 
 
-      (0, _abc_tunebook_midi2.default)(el || this.el, notation, engraverParams, parserParams, midiParams, renderParams);
+      (0, _abc_tunebook_midi2.default)(el || this.el, notation, parserParams, midiParams, renderParams);
     }
   }, {
     key: 'render',
@@ -71,7 +70,6 @@ var Midi = function (_Component) {
 
 Midi.propTypes = {
   el: _propTypes2.default.node,
-  engraverParams: _propTypes2.default.object,
   midiParams: _propTypes2.default.object,
   notation: _propTypes2.default.string.isRequired,
   parserParams: _propTypes2.default.object,
