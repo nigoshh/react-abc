@@ -55,6 +55,7 @@ var Midi = function (_Component) {
           soundFontUrl = _props.soundFontUrl;
 
 
+      console.log("u", soundFontUrl);
       if (soundFontUrl) {
         _midi2.default.midi.setSoundFont(soundFontUrl);
       }

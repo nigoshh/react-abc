@@ -17,10 +17,11 @@ class Midi extends Component {
       soundFontUrl,
     } = this.props;
 
+    console.log("u", soundFontUrl)
     if (soundFontUrl) {
       abcjs.midi.setSoundFont(soundFontUrl);
     }
-    
+
     renderMidi(
       el || this.el,
       notation,
