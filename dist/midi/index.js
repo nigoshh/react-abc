@@ -55,11 +55,11 @@ var Midi = function (_Component) {
           soundFontUrl = _props.soundFontUrl;
 
 
-      (0, _abc_tunebook_midi2.default)(el || this.el, notation, parserParams, midiParams, renderParams);
-
       if (soundFontUrl) {
         _midi2.default.midi.setSoundFont(soundFontUrl);
       }
+
+      (0, _abc_tunebook_midi2.default)(el || this.el, notation, parserParams, midiParams, renderParams);
     }
   }, {
     key: 'render',
