@@ -55,6 +55,8 @@ var Midi = function (_Component) {
       _midi2.default.midi.setSoundFont(soundfontUrl);
 
       _midi2.default.renderMidi(el || this.el, notation, parserParams, midiParams, renderParams);
+
+      _midi2.default.midi.startPlaying();
     }
   }, {
     key: 'render',

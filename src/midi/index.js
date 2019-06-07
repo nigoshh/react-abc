@@ -26,6 +26,8 @@ class Midi extends Component {
       midiParams,
       renderParams,
     );
+
+    abcjs.midi.startPlaying();
   }
 
   render() {
