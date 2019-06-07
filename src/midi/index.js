@@ -16,6 +16,9 @@ class Midi extends Component {
       soundfontUrl,
     } = this.props;
 
+    console.log('url', soundfontUrl);
+    abcjs.midi.setSoundFont(soundfontUrl);
+
     abcjs.renderMidi(
       el || this.el,
       notation,
@@ -23,8 +26,6 @@ class Midi extends Component {
       midiParams,
       renderParams,
     );
-
-    abcjs.midi.setSoundFont(soundfontUrl);
   }
 
   render() {
