@@ -14,9 +14,9 @@ var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _abc_tunebook_midi = require('abcjs/src/api/abc_tunebook_midi');
+var _midi = require('abcjs/midi');
 
-var _abc_tunebook_midi2 = _interopRequireDefault(_abc_tunebook_midi);
+var _midi2 = _interopRequireDefault(_midi);
 
 var _props2 = require('../defaults/props');
 
@@ -47,10 +47,13 @@ var Midi = function (_Component) {
           midiParams = _props.midiParams,
           notation = _props.notation,
           parserParams = _props.parserParams,
-          renderParams = _props.renderParams;
+          renderParams = _props.renderParams,
+          soundfontUrl = _props.soundfontUrl;
 
 
-      (0, _abc_tunebook_midi2.default)(el || this.el, notation, parserParams, midiParams, renderParams);
+      _midi2.default.renderMidi(el || this.el, notation, parserParams, midiParams, renderParams);
+
+      _midi2.default.midi.setSoundFont(soundfontUrl);
     }
   }, {
     key: 'render',
@@ -73,7 +76,8 @@ Midi.propTypes = {
   midiParams: _propTypes2.default.object,
   notation: _propTypes2.default.string.isRequired,
   parserParams: _propTypes2.default.object,
-  renderParams: _propTypes2.default.object
+  renderParams: _propTypes2.default.object,
+  soundfontUrl: _propTypes2.default.string
 };
 
 Midi.defaultProps = _props2.midiProps;
