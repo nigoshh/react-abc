@@ -2,13 +2,19 @@
   "env": {
     "browser": true
   },
+  "parser": "babel-eslint",
   "extends": ["eslint:recommended", "airbnb"],
   "plugins": ["react"],
   "rules": {
-    "jsx-a11y/anchor-is-valid": [ "error", {
-      "components": [ "" ]
-    }],
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": [""]
+      }
+    ],
     "react/jsx-filename-extension": [1, { "extensions": [".js"] }],
-    "react/forbid-prop-types": [1, { "forbid": ["any", "array"] }]
+    "react/forbid-prop-types": [1, { "forbid": ["any", "array"] }],
+    "import/no-named-as-default": "none",
+    "import/no-named-as-default-member": "none"
   }
 }

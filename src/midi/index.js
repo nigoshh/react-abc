@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import abcjs from 'abcjs/midi'
+import abcjs from 'abcjs/midi';
 import renderMidi from 'abcjs/src/api/abc_tunebook_midi';
 import { midiProps } from '../defaults/props';
 import './style.css';
